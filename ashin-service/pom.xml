@@ -22,7 +22,7 @@
         <guava.version>19.0</guava.version>
         <joda-time.version>2.9.2</joda-time.version>
         <poi.version>3.15</poi.version>
-        <retrofit.version>2.3.0</retrofit.version>
+        <retrofit.version>2.7.1</retrofit.version>
 
         <cglib.version>3.1</cglib.version>
         <zookeeper.version>3.4.6</zookeeper.version>
