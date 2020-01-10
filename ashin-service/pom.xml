@@ -25,7 +25,7 @@
         <retrofit.version>2.3.0</retrofit.version>
 
         <cglib.version>3.1</cglib.version>
-        <zookeeper.version>3.4.6</zookeeper.version>
+        <zookeeper.version>3.4.14</zookeeper.version>
         <curator.version>2.10.0</curator.version>
         <dubbo.version>2.6.4</dubbo.version>
         <resteasy.version>3.0.14.Final</resteasy.version>
