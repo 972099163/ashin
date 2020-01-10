@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ashin.model.mapper.EbCustomerMapper">
+  <resultMap id="BaseResultMap" type="com.ashin.model.entity.EbCustomer">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
+  </resultMap>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.ashin.model.entity.EbCustomer" useGeneratedKeys="true">
+    insert into `eb_customer` (user_name, user_password)
+    values (#{userName,jdbcType=VARCHAR}, #{userPassword,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, user_name, user_password
+    from `eb_customer`
+  </select>
+
+  <delete id="deleteBatch">
+    DELETE FROM eb_customer
+    WHERE id IN (${ids})
+  </delete>
+</mapper>

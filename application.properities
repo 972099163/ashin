@@ -1,0 +1,67 @@
+
+#profile多环境配置 - 默认即为本配置文件
+#spring.profiles.active=prod
+#spring.profiles.active=test
+
+#应用端口-应用上下文路径
+server.port=8081
+server.servlet.context-path=/technology
+
+#日志
+logging.path=E:\\logs\\technology\\logs
+logging.file=technology
+
+#前端模板引擎
+spring.freemarker.cache=false
+spring.freemarker.charset=UTF-8
+spring.freemarker.suffix=.html
+spring.freemarker.request-context-attribute=request
+spring.freemarker.template-loader-path=classpath:/templates
+#限定前端上传的文件大小
+spring.servlet.multipart.max-request-size=20Mb
+spring.servlet.multipart.max-file-size=2Mb
+
+#日志级别
+logging.level.org.springframework = INFO
+logging.level.com.fasterxml.jackson = INFO
+logging.level.com.debug.springboot = DEBUG
+
+#json序列化配置
+spring.jackson.date-format=yyyy-MM-dd HH:mm:ss
+spring.jackson.time-zone=GMT+8
+
+spring.datasource.initialization-mode=never
+spring.jmx.enabled=false
+
+#数据源配置
+datasource.url=jdbc:mysql://127.0.0.1:3306/technology?useUnicode=true&amp;characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+datasource.username=root
+datasource.password=linsen
+
+#mybatis
+mybatis.config-location=classpath:mybatis-config.xml
+mybatis.checkConfigLocation = true
+mybatis.mapper-locations=classpath:mappers/*.xml
+
+#缓存中间件redis
+spring.redis.host=127.0.0.1
+spring.redis.port=6379
+spring.redis.password=
+redis.config.host=redis://127.0.0.1:6379
+
+#分布式服务调度中间件dubbo+服务协调中间件zookeeper
+dubbo.registry.address=zookeeper://127.0.0.1:2181
+
+#消息中间件rabbitmq
+spring.rabbitmq.virtual-host=/
+spring.rabbitmq.host=127.0.0.1
+spring.rabbitmq.port=5672
+spring.rabbitmq.username=guest
+spring.rabbitmq.password=guest
+
+spring.rabbitmq.listener.simple.concurrency=5
+spring.rabbitmq.listener.simple.max-concurrency=15
+spring.rabbitmq.listener.simple.prefetch=10
+
+#通用配置
+server.tomcat.additional-tld-skip-patterns=jaxb-api.jar,jaxb-core.jar
